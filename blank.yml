@@ -1,0 +1,203 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+mods-folder-test/ .github/workflows/
+in
+main
+1
+
+# This is a basic workflow to help you get started with Actions
+
+- name: Setup Haxe environment
+  # You may pin to the exact commit or the version.
+  # uses: krdlab/setup-haxe@3eacc6f763a46d90d83df07afb4972250e8e8fdb
+  uses: krdlab/setup-haxe@v1.1.6
+  with:
+    # Version Spec of the version to use. Example: 4.2.2
+    haxe-version: # default is 4.2.3
+
+2
+
+​
+
+3
+
+name: CI
+
+4
+
+​
+
+5
+
+# Controls when the workflow will run
+
+6
+
+on:
+
+7
+
+  # Triggers the workflow on push or pull request events but only for the main branch
+
+8
+
+  push:
+
+9
+
+    branches: [ main ]
+
+10
+
+  pull_request:
+
+11
+
+    branches: [ main ]
+
+12
+
+​
+
+13
+
+  # Allows you to run this workflow manually from the Actions tab
+
+14
+
+  workflow_dispatch:
+
+15
+
+​
+
+16
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
+17
+
+jobs:
+
+18
+
+  # This workflow contains a single job called "build"
+
+19
+
+  build:
+
+20
+
+    # The type of runner that the job will run on
+
+21
+
+    runs-on: ubuntu-latest
+
+22
+
+​
+
+23
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+
+24
+
+    steps:
+
+25
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+26
+
+      - uses: actions/checkout@v2
+
+27
+
+​
+
+28
+
+      # Runs a single command using the runners shell
+
+29
+
+      - name: Run a one-line script
+
+30
+
+        run: echo Hello, world!
+
+31
+
+​
+
+32
+
+      # Runs a set of commands using the runners shell
+
+33
+
+      - name: Run a multi-line script
+
+34
+
+        run: |
+
+35
+
+          echo Add other actions to build,
+
+36
+
+          echo test, and deploy your project.
+
+37
+
+​
+
+Use Control + Space to trigger autocomplete in most situations.
+/
+/ Setup Haxe environment
+Setup Haxe environment
+v1.1.6
+23
+
+
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
